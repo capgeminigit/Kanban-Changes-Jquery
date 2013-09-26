@@ -1,0 +1,124 @@
+
+/*
+	Alignment
+------------------------------------------------------------------- */
+
+/* Floats */
+
+.left {float: left;}
+.right {float: right;}
+
+.clear,.clearer {clear: both;}
+.clearer {
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+}
+
+
+/*
+	DND specifics
+------------------------------------------------------------------- */
+
+/* Layout */
+
+#kanban-dnd-wrapper {
+    height: 100%;
+    margin: 0 auto;
+    width: 95%;
+}
+
+/* Columns */
+
+.column {
+	margin-left: 2%;
+	width: 23%;
+	height:100%;
+	border-radius: 5px 5px 5px 5px;
+		-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	background-color: #DADADA;
+}
+.column.first {margin-left: 0;}
+
+.column-title{
+	width:100%;
+	overflow:hidden;
+	height:15px;
+	font-size:1.25em;
+	font-weight:bold;
+	color:#575757;
+	padding:10px;
+	}
+	.column-title .textbox{
+	width:80%;
+	float:left;
+	}
+.column-title .iconbox{
+	width:15%;
+	float:right
+	}
+/* Sortable items */
+
+.sortable-list {
+	background-color: #DADADA;
+	list-style: none;
+	margin: 0;
+	height:95%;
+	overflow:auto;
+	padding: 10px;
+	
+}
+
+	  .col1 li{
+	  -moz-border-left-colors: #A52A2A;
+	  }
+	    .col2 li{
+	  -moz-border-left-colors: #e7a84b;
+	  }
+	    .col3 li{
+	  -moz-border-left-colors: #add8e6;
+	  }
+	    .col4 li{
+	  -moz-border-left-colors: #90EE90;
+	  }
+	  
+	.sortable-item {
+    -moz-border-bottom-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-image: none;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    box-shadow: 0 1px 1px #B7B7B7;
+    color: #878787;
+    cursor: move;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;   
+    margin-bottom: 10px;
+    text-align: left;
+	padding:5px;
+}
+
+/* Containment area */
+
+#containment {
+	background-color: #FFA;
+	height: 230px;
+}
+
+
+/* Item placeholder (visual helper) */
+
+.placeholder {
+	background-color: #BFB;
+	border: 1px dashed #666;
+	height: 58px;
+	margin-bottom: 5px;
+}
