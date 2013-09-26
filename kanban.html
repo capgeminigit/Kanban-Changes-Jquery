@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<head>
+		<title>Kanban Board v0.0.1</title>
+		<link rel="stylesheet" type="text/css" href="style_jquery.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="dragndrop.css" media="screen" />
+	</head>
+	
+	<body class="kanban-dnd-body">
+	
+		<div id="kanban-dnd-wrapper">
+			<div class="kanban-dnd-section" >
+				<div class="kanban-dnd-section-content">
+					<!-- BEGIN: XHTML for example 1.2 -->
+					<div id="kanban-dnd-div">
+						<div class="column left first">
+							<div class="column-title">
+								<div class="textbox" >Not Started (<span class="NScount"></span>)</div>
+								<div class="iconBox"><img src="img/expand.png"/>&nbsp;<img src="img/collapse.png"/></div>
+							</div>
+							  <ul id="NSView" class="sortable-list col1" data-role="NSView" >
+								</ul>
+						<!--	<ul class="sortable-list col1">
+								<li class="sortable-item">Sortable item A</li>
+								<li class="sortable-item">Sortable item B</li>
+							</ul>
+						-->
+						</div>
+
+						<div class="column left">
+							<div class="column-title">
+								<div class="textbox">In Progress (<span class="NScount"></span>)</div>
+								<div class="iconBox"><img src="img/expand.png"/>&nbsp;<img src="img/collapse.png"/></div>
+							</div>
+							<ul class="sortable-list col2">
+								<li class="sortable-item">Add windows phone support</li>
+								<li class="sortable-item">Make App</li>
+								<li class="sortable-item">IE6 support</li>
+							</ul>
+
+						</div>
+
+						<div class="column left">
+							<div class="column-title">
+								<div class="textbox">Test (<span class="NScount"></span>)</div>
+								<div class="iconBox"><img src="img/expand.png"/>&nbsp;<img src="img/collapse.png"/></div>
+							</div>
+							<ul class="sortable-list col3">
+								<li class="sortable-item">Task 2 fooooooooo bar lots of text in this one eh ? fooo</li>
+								<li class="sortable-item">Find Unicorn</li>
+							</ul>
+						</div>
+						
+						<div class="column left">
+							<div class="column-title">
+								<div class="textbox">Done (<span class="NScount"></span>)</div>
+								<div class="iconBox"><img src="img/expand.png"/>&nbsp;<img src="img/collapse.png"/></div>
+							</div>
+							<ul class="sortable-list col4">
+								<li class="sortable-item">Chrome Development</li>
+								<li class="sortable-item">Find Holy Grail</li>
+								<li class="sortable-item">Dig hole</li>
+								<li class="sortable-item">Eat raisins</li>
+							</ul>
+						</div>
+
+						<div class="clearer">&nbsp;</div>
+
+					</div>
+					<!-- END: XHTML for example 1.2 -->
+				</div>
+			</div>
+		</div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+<!-- Example jQuery code (JavaScript)  -->
+	<script type="text/javascript">
+$(document).ready(function(){
+
+	// Example 1.2: Sortable and connectable lists
+	$('#kanban-dnd-div .sortable-list').sortable({
+		connectWith: '#kanban-dnd-div .sortable-list'
+	});
+ 
+		var parent = document.getElementById('NSView');
+            var listItem = document.createElement('li');
+            listItem.setAttribute('id','listitem');
+            listItem.innerHTML = "Fix IE bug";
+				listItem.className ="sortable-item";
+            parent.appendChild(listItem);
+           
+            var listItem = document.createElement('li');
+            listItem.setAttribute('id','listitem');
+			listItem.className ="sortable-item";
+            listItem.innerHTML = "sneak install chorme frame";
+     
+            parent.appendChild(listItem);
+           
+            var list = document.getElementById('NSView');
+            $(list).parent("refresh");
+
+		
+});
+
+
+</script>
+
+</body>
+</html>
